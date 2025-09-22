@@ -24,23 +24,25 @@ The dataset itself was relatively uniform and low-variance, which meant most res
 
 \## 🗂 Repository Structure
 
-├── data/
-│ ├── raw\_data.csv # Raw Google Ads export
-│ ├── cleaned\_data.csv # Cleaned and standardized data
-│ └── views/ # Saved SQL views for reuse
-│
-├── sql/
-│ └── ads\_project\_code.sql # Full SQL script: cleaning, rollups, metrics
-│
-├── python/
-│ ├── function\_definitions.ipynb # Clean notebook with only functions
-│ └── full\_workflow.ipynb # Complete analysis workflow with outputs
-│
-├── tableau/
-│ └── dashboards/ # Tableau workbooks (.twbx)
-│
-├── findings\_notes.md # Raw significance test notes
-└── README.md # This file
+data/
+     - google_ads.csv # Raw Google Ads export
+     - staging.csv # Cleaned and standardized data
+
+
+sql/
+     - ads_project_code.sql # Full SQL script: cleaning, rollups, metrics
+       - contains create functions for views ready for export
+
+python/
+     - function_definitions.ipynb # Clean notebook with only functions
+     - full_workflow.ipynb # Complete analysis workflow with outputs
+
+tableau/
+     - dashboards/ # Tableau workbooks (.twbx)
+
+README.md # This file
+
+raw_findings.md # notes on significant findings from regression tests in Python
 
 
 
@@ -48,21 +50,23 @@ The dataset itself was relatively uniform and low-variance, which meant most res
 
 
 
-\## 🧹 SQL Code
+## 🧹 SQL Code
 
-The SQL script (`sql/google\_ads\_analysis.sql`) handles:  
+The SQL script (`sql/google_ads_analysis.sql`) handles:  
 
-\- \*\*Cleaning \& standardization\*\*: fixing device names, keyword inconsistencies, date formatting, type conversions, handling blanks/NULLs.  
+- **Cleaning & standardization**: fixing device names, keyword inconsistencies, date formatting, type conversions, handling blanks/NULLs.  
+- **Rollups**: daily, weekly, device-level, and keyword-level aggregations.  
+- **Efficiency metrics**: ROI, CPC, CPA, profit per click, etc.  
+- **Iterative refinement**: views are sometimes redefined, and these were intentionally kept to show the exploratory process.  
 
-\- \*\*Rollups\*\*: daily, weekly, device-level, and keyword-level aggregations.  
+The output of this stage is a set of clean tables and views which can be exported and used in Python.  
 
-\- \*\*Efficiency metrics\*\*: ROI, CPC, CPA, profit per click, etc.  
+**Note on Exporting:**  
+When exporting views from SQL as CSV, the default export options may merge all fields into a single column. To avoid this, specify **comma (`,`) as the field separator** in the export wizard.  
 
-\- \*\*Iterative refinement\*\*: views are sometimes redefined, these were kept as is so as to show the iterative exploratory process.
-
-
-
-The output of this stage is a set of clean tables and views stored in `/data/views/`.  
+Alternatively, you can handle this directly in Python with:  
+```pd.read_csv("file.csv", delimiter=";", quotechar='"', engine="python")```
+Note that this has already been implemented where necessary in the "full_workflow.ipynb" file.
 
 
 
@@ -124,40 +128,6 @@ These dashboards make the cleaned and aggregated results explorable without writ
 
 
 
----
-
-
-
-\## 🎯 Purpose
-
-The purpose of this project is to demonstrate:  
-
-1.Data cleaning \& transformation in SQL.  
-
-2\. \*\*Statistical testing\*\* in Python.  
-
-3\. Visualization \& communication in Tableau.  
-
-4\. Workflow readiness for reporting — the entire process from raw export to insights.  
-
-
-
-
-
----
-
-
-
-\## ⚙️ Tools \& Technologies
-
-\- SQL (MySQL) for cleaning and rollups  
-
-\- Python (pandas, statsmodels, Jupyter) for statistical analysis  
-
-\- Tableau for interactive dashboards  
-
-
-
 
 
 ---
@@ -166,7 +136,7 @@ The purpose of this project is to demonstrate:
 
 \## 🙋 Author
 
-\*Your Name Here\*  
+\*Nehir Rogers-Sirin\*  
 
 \[LinkedIn](#) | \[Portfolio](#)  
 
