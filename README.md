@@ -4,9 +4,8 @@ The goal of this project is to demonstrate my ability to take raw data through a
 
 While the dataset itself was relatively uniform and low-variance (meaning many results were predictable), the value of this project lies in showing **workflow and tooling integration**: taking messy data all the way to the point of report readiness.  
 
-This project uses the [Google Ads Sales Dataset](https://www.kaggle.com/datasets/nayakganesh007/google-ads-sales-dataset) published on Kaggle by **nayakganesh007**.  
+This project uses the [Google Ads Sales Dataset](https://www.kaggle.com/datasets/nayakganesh007/google-ads-sales-dataset) published on Kaggle by **nayakganesh007**. This dataset was released under the CC0 (Public Domain) license via Kaggle and is free to use, modify, and redistribute. 
 
-**License:** CC0 (Public Domain) — you are free to use, modify, and redistribute this dataset. Usage is also subject to Kaggle’s [Terms of Use](https://www.kaggle.com/terms).
 ---
 
 ## 📌 Project Overview
