@@ -91,6 +91,6 @@ These dashboards make the cleaned and aggregated results explorable without writ
 🙋 Author
 
 Nehir Rogers-Sirin
-Linkedin: 
+Linkedin: https://www.linkedin.com/in/nehirrs/
 
 
