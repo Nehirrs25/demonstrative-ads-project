@@ -18,14 +18,14 @@ This project demonstrates:
 
 ## 🗂 Repository Structure
 
-ads_project_code.sql # Full SQL script: cleaning, rollups, metrics (with views)
-full workflow.ipynb # Complete analysis workflow (SQL → Python → outputs)
-function definitions.ipynb # Clean notebook with only regression functions
-google_ads.csv # Raw Google Ads export
-staging.csv # Cleaned & standardized dataset
-raw_findings.md # Notes on significant regression results
-ads project visualizations/ # Tableau dashboards (.twbx)
-README.md # This file
+- ads_project_code.sql # Full SQL script: cleaning, rollups, metrics (with views)
+- full workflow.ipynb # Complete analysis workflow (SQL → Python → outputs)
+- function definitions.ipynb # Clean notebook with only regression functions
+- google_ads.csv # Raw Google Ads export
+- staging.csv # Cleaned & standardized dataset
+- raw_findings.md # Notes on significant regression results
+- ads project visualizations/ # Tableau dashboards (.twbx)
+- README.md # This file
 
 
 ---
