@@ -95,7 +95,7 @@ The **Demonstrative Ads Project Dashboard** (`Demonstrative Ads Project Dashboar
 - Each chart has its own metric slicer.  
 - Two additional slicers (Device and Keyword) apply to both charts. Leaving one blank provides grouping by the other, giving multiple analytic perspectives.  
 
-📈 Tableau Dashboards
+## 📈 Tableau Dashboards
 
 Folder: ads project visualizations/
 
