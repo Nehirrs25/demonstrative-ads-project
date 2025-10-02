@@ -1,6 +1,6 @@
 # Demonstrative Ads Project
 
-The goal of this project is to demonstrate my ability to take raw data through a complete workflow — from cleaning and transformation in SQL, through statistical testing in Python, and into a set of report-ready findings and visualizations.  
+The goal of this project is to demonstrate my ability to take raw data through a complete workflow, from cleaning and transformation in SQL, through statistical testing in Python, into an interactive Power BI dashboard, complete with a set of report-ready findings and visualizations.
 
 While the dataset itself was relatively uniform and low-variance (meaning many results were predictable), the value of this project lies in showing **workflow and tooling integration**: taking messy data all the way to the point of report readiness.  
 
