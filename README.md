@@ -90,7 +90,7 @@ The **Demonstrative Ads Project Dashboard** (`Demonstrative Ads Project Dashboar
   - One for base metrics  
   - One for efficiency metrics  
 - Each chart has its own metric slicer.  
-- Two additional slicers (Device and Keyword) apply to both charts. Leaving one blank provides grouping by the other, giving multiple analytic perspectives.  
+- Two additional slicers (Device and Keyword) apply to both charts. Leaving one blank provides grouping solely by the other, giving multiple analytic perspectives.  
 
 ## 🙋 Author
 
