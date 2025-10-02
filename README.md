@@ -52,19 +52,17 @@ When exporting views to CSV, default SQL settings may merge fields into one colu
 
 ## 🐍 Python Code
 
-function definitions.ipynb
-Clean notebook with only regression function definitions, fully documented with inline comments.
+**function definitions.ipynb** - Clean notebook with only regression function definitions, fully documented with inline comments.
 
-full workflow.ipynb
-Complete workflow including:
+**full workflow.ipynb** - Complete workflow including:
 
-Running OLS regressions across keyword–device combinations
+- Running OLS regressions across keyword–device combinations
 
-Filtering significant predictors (p ≤ 0.002) to account for multiple testing
+- Filtering significant predictors (p ≤ 0.002) to account for multiple testing
 
-Subset regression testing on devices within specific keywords
+- Subset regression testing on devices within specific keywords
 
-Raw outputs and summaries
+- Raw outputs and summaries
 
 📊 Findings
 
