@@ -2,7 +2,7 @@
 
 The goal of this project is to demonstrate my ability to take raw data through a complete workflow, from cleaning and transformation in SQL, through statistical testing in Python, into an interactive Power BI dashboard, ending with a set of report-ready findings and visualizations.
 
-While the dataset itself was relatively uniform and low-variance (meaning many results were predictable), the value of this project lies in showing **workflow and tooling integration**: taking messy data all the way to the point of report readiness.  
+While the dataset itself was relatively uniform and low-variance (meaning many results were predictable), the value of this project lies in showing workflow and tooling integration, taking messy data all the way to the point of report readiness.  
 
 This project uses the [Google Ads Sales Dataset](https://www.kaggle.com/datasets/nayakganesh007/google-ads-sales-dataset) published on Kaggle by **nayakganesh007**. This dataset was released under the CC0 (Public Domain) license via Kaggle and is free to use, modify, and redistribute. 
 
