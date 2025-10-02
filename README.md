@@ -20,13 +20,14 @@ This project demonstrates:
 
 ## 🗂 Repository Structure
 
-- ads_project_code.sql # Full SQL script: cleaning, rollups, metrics (with views)
-- full workflow.ipynb # Complete analysis workflow (SQL → Python → outputs)
+- ads_project_code.sql # Full SQL script: cleaning, rollups, metric calculation
+- full workflow.ipynb # Complete analysis workflow
 - function definitions.ipynb # Clean notebook with only regression functions
 - google_ads.csv # Raw Google Ads export
-- staging.csv # Cleaned & standardized dataset
+- cleaned_set.csv # Cleaned & standardized dataset
 - raw_findings.md # Notes on significant regression results
-- ads project visualizations/ # Tableau dashboards (.twbx)
+- Demonstrative Ads Project Dashboard.pbix # dynamic visual dashboard
+- ads project visualizations/ # Tableau graphics (.twbx)
 - README.md # This file
 
 
@@ -71,6 +72,28 @@ Raw outputs and summaries
 Because the dataset was largely invariate and uniform, most results were unsurprising.
 
 Significant findings are detailed in raw_findings.md.
+
+## 📊 Power BI Dashboard  
+
+The **Demonstrative Ads Project Dashboard** (`Demonstrative Ads Project Dashboard.pbix`) provides an interactive view of the cleaned and tested data, with multiple slicers and drill-downs that allow for flexible exploration across devices and keywords.  
+
+### Page 1 – Comparative Analysis  
+- Three slicers control the metrics shown:  
+  - **Base metrics** (sales, clicks, impressions, spend, leads, conversions)  
+  - **Efficiency metrics** (ROI, CPC, CPA, cost per lead, profit per click, etc.)  
+  - **Share metrics** (distribution of spend, clicks, conversions, etc.)  
+- All visuals are grouped by **Device** with a drill-down to **Keyword**, enabling layered analysis.  
+- Visuals include:  
+  - **Two bar charts** – show totals across groups for selected base and efficiency metrics  
+  - **One pie chart** – shows share splits for the chosen metric  
+  - **Two KPI cards** – display totals for quick reference  
+
+### Page 2 – Time Series Analysis  
+- Two **line charts** track trends over time:  
+  - One for base metrics  
+  - One for efficiency metrics  
+- Each chart has its own metric slicer.  
+- Two additional slicers (Device and Keyword) apply to both charts. Leaving one blank provides grouping by the other, giving multiple analytic perspectives.  
 
 📈 Tableau Dashboards
 
