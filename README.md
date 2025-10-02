@@ -51,7 +51,7 @@ When exporting views to CSV, default SQL settings may merge fields into one colu
 ```pd.read_csv(..."file.csv", delimiter=";", quotechar='"', engine="python")```
    - note that this is already implemented where needed in the full_workflow file.
 
-🐍 Python Code
+## 🐍 Python Code
 
 function definitions.ipynb
 Clean notebook with only regression function definitions, fully documented with inline comments.
