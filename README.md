@@ -12,7 +12,7 @@ This project uses the [Google Ads Sales Dataset](https://www.kaggle.com/datasets
 
 This project demonstrates:
 
-- **SQL** → Cleaning, transforming, and creating rollups/efficiency metrics  
+- **SQL** → Cleaning, transforming, creating rollups and derived metrics  
 - **Python** → Statistical testing with regression models  
 - **Power BI** → Interactive dashboard with drill-downs and slicers for base, efficiency, and share metrics  
 - **Tableau** → Additional interactive visualizations and comparisons  
