@@ -1,6 +1,6 @@
 # Demonstrative Ads Project
 
-The goal of this project is to demonstrate my ability to take raw data through a complete workflow — from cleaning and transformation in SQL, through statistical testing in Python, and into a set of report-ready findings and visualizations.  
+The goal of this project is to demonstrate my ability to take raw data through a complete workflow, from cleaning and transformation in SQL, through statistical testing in Python, into an interactive Power BI dashboard, ending with a set of report-ready findings and visualizations.
 
 While the dataset itself was relatively uniform and low-variance (meaning many results were predictable), the value of this project lies in showing **workflow and tooling integration**: taking messy data all the way to the point of report readiness.  
 
@@ -12,9 +12,10 @@ This project uses the [Google Ads Sales Dataset](https://www.kaggle.com/datasets
 
 This project demonstrates:
 
-- **SQL** → Cleaning, transforming, and creating rollups/efficiency metrics.  
-- **Python** → Statistical testing with regression models.  
-- **Tableau** → Interactive visualization.  
+- **SQL** → Cleaning, transforming, creating rollups and derived metrics  
+- **Python** → Statistical testing with regression models  
+- **Power BI** → Interactive dashboard with drill-downs and slicers for base, efficiency, and share metrics  
+- **Tableau** → Additional interactive visualizations and comparisons  
 
 ---
 
@@ -51,7 +52,7 @@ When exporting views to CSV, default SQL settings may merge fields into one colu
 ```pd.read_csv(..."file.csv", delimiter=";", quotechar='"', engine="python")```
    - note that this is already implemented where needed in the full_workflow file.
 
-🐍 Python Code
+## 🐍 Python Code
 
 function definitions.ipynb
 Clean notebook with only regression function definitions, fully documented with inline comments.
@@ -95,11 +96,11 @@ The **Demonstrative Ads Project Dashboard** (`Demonstrative Ads Project Dashboar
 - Each chart has its own metric slicer.  
 - Two additional slicers (Device and Keyword) apply to both charts. Leaving one blank provides grouping by the other, giving multiple analytic perspectives.  
 
-📈 Tableau Dashboards
+## 📈 Tableau Graphics
 
 Folder: ads project visualizations/
 
-Interactive workbooks (.twbx) created from the cleaned data, including:
+workbooks (.twbx) created from the cleaned data, including:
 
 Device and keyword performance comparisons
 
@@ -109,9 +110,7 @@ Spend, clicks, and conversions share
 
 Trend visualizations (time series, week-over-week)
 
-These dashboards make the cleaned and aggregated results explorable without writing SQL or Python. They are organized into folders based on which category is being grouped by and what is being tested on.
-
-🙋 Author
+## 🙋 Author
 
 Nehir Rogers-Sirin
 
