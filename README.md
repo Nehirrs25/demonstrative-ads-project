@@ -111,7 +111,7 @@ Trend visualizations (time series, week-over-week)
 
 These dashboards make the cleaned and aggregated results explorable without writing SQL or Python. They are organized into folders based on which category is being grouped by and what is being tested on.
 
-🙋 Author
+## 🙋 Author
 
 Nehir Rogers-Sirin
 
