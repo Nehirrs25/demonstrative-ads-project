@@ -64,7 +64,7 @@ When exporting views to CSV, default SQL settings may merge fields into one colu
 
 - Raw outputs and summaries
 
-📊 Findings
+## 📊 Findings
 
 Because the dataset was largely invariate and uniform, most results were unsurprising.
 
