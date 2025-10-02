@@ -96,11 +96,11 @@ The **Demonstrative Ads Project Dashboard** (`Demonstrative Ads Project Dashboar
 - Each chart has its own metric slicer.  
 - Two additional slicers (Device and Keyword) apply to both charts. Leaving one blank provides grouping by the other, giving multiple analytic perspectives.  
 
-## 📈 Tableau Dashboards
+## 📈 Tableau Graphics
 
 Folder: ads project visualizations/
 
-Interactive workbooks (.twbx) created from the cleaned data, including:
+workbooks (.twbx) created from the cleaned data, including:
 
 Device and keyword performance comparisons
 
@@ -109,8 +109,6 @@ Efficiency metrics (ROI, CPC, CPA)
 Spend, clicks, and conversions share
 
 Trend visualizations (time series, week-over-week)
-
-These dashboards make the cleaned and aggregated results explorable without writing SQL or Python. They are organized into folders based on which category is being grouped by and what is being tested on.
 
 ## 🙋 Author
 
