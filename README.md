@@ -15,7 +15,6 @@ This project demonstrates:
 - **SQL** → Cleaning, transforming, creating rollups and derived metrics  
 - **Python** → Statistical testing with regression models  
 - **Power BI** → Interactive dashboard with drill-downs and slicers for base, efficiency, and share metrics  
-- **Tableau** → Additional interactive visualizations and comparisons  
 
 ---
 
@@ -28,7 +27,6 @@ This project demonstrates:
 - cleaned_set.csv # Cleaned & standardized dataset
 - raw_findings.md # Notes on significant regression results
 - Demonstrative Ads Project Dashboard.pbix # dynamic visual dashboard
-- ads project visualizations/ # Tableau graphics (.twbx)
 - README.md # This file
 
 
@@ -95,20 +93,6 @@ The **Demonstrative Ads Project Dashboard** (`Demonstrative Ads Project Dashboar
   - One for efficiency metrics  
 - Each chart has its own metric slicer.  
 - Two additional slicers (Device and Keyword) apply to both charts. Leaving one blank provides grouping by the other, giving multiple analytic perspectives.  
-
-## 📈 Tableau Graphics
-
-Folder: ads project visualizations/
-
-workbooks (.twbx) created from the cleaned data, including:
-
-Device and keyword performance comparisons
-
-Efficiency metrics (ROI, CPC, CPA)
-
-Spend, clicks, and conversions share
-
-Trend visualizations (time series, week-over-week)
 
 ## 🙋 Author
 
