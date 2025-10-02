@@ -1,148 +1,120 @@
-# demonstrative-ads-project
-The goal of this project is to demonstrate my ability to take raw data through a complete workflow, from cleaning and transformation in SQL, through statistical testing in Python, and into a set of report-ready findings and visualizations.
-\## 📌 Project Overview
+# Demonstrative Ads Project
 
-This project demonstrates my ability to take raw marketing data through a complete workflow:  
+The goal of this project is to demonstrate my ability to take raw data through a complete workflow — from cleaning and transformation in SQL, through statistical testing in Python, and into a set of report-ready findings and visualizations.  
 
-\- SQL for cleaning, transforming, and creating rollups and efficiency metrics.  
+While the dataset itself was relatively uniform and low-variance (meaning many results were predictable), the value of this project lies in showing **workflow and tooling integration**: taking messy data all the way to the point of report readiness.  
 
-\- Python for statistical testing with regression models.  
-
-\- Tableau for interactive visualization.  
-
-
-
-The dataset itself was relatively uniform and low-variance, which meant most results were predictable. The value of this project lies in showing the workflow and tooling integration, taking messy data to the point of report readiness. 
-
-
-
-
+This project uses the [Google Ads Sales Dataset](https://www.kaggle.com/datasets/nayakganesh007/google-ads-sales-dataset) published on Kaggle by **nayakganesh007**. This dataset was released under the CC0 (Public Domain) license via Kaggle and is free to use, modify, and redistribute. 
 
 ---
 
+## 📌 Project Overview
 
+This project demonstrates:
 
-\## 🗂 Repository Structure
-
-data/
-     - google_ads.csv # Raw Google Ads export
-     - staging.csv # Cleaned and standardized data
-
-
-sql/
-     - ads_project_code.sql # Full SQL script: cleaning, rollups, metrics
-       - contains create functions for views ready for export
-
-python/
-     - function_definitions.ipynb # Clean notebook with only functions
-     - full_workflow.ipynb # Complete analysis workflow with outputs
-
-tableau/
-     - dashboards/ # Tableau workbooks (.twbx)
-
-README.md # This file
-
-raw_findings.md # notes on significant findings from regression tests in Python
-
-
+- **SQL** → Cleaning, transforming, and creating rollups/efficiency metrics.  
+- **Python** → Statistical testing with regression models.  
+- **Tableau** → Interactive visualization.  
 
 ---
 
+## 🗂 Repository Structure
 
+- ads_project_code.sql # Full SQL script: cleaning, rollups, metric calculation
+- full workflow.ipynb # Complete analysis workflow
+- function definitions.ipynb # Clean notebook with only regression functions
+- google_ads.csv # Raw Google Ads export
+- cleaned_set.csv # Cleaned & standardized dataset
+- raw_findings.md # Notes on significant regression results
+- Demonstrative Ads Project Dashboard.pbix # dynamic visual dashboard
+- ads project visualizations/ # Tableau graphics (.twbx)
+- README.md # This file
+
+
+---
 
 ## 🧹 SQL Code
 
-The SQL script (`sql/google_ads_analysis.sql`) handles:  
+**File:** `ads_project_code.sql`  
 
-- **Cleaning & standardization**: fixing device names, keyword inconsistencies, date formatting, type conversions, handling blanks/NULLs.  
-- **Rollups**: daily, weekly, device-level, and keyword-level aggregations.  
-- **Efficiency metrics**: ROI, CPC, CPA, profit per click, etc.  
-- **Iterative refinement**: views are sometimes redefined, and these were intentionally kept to show the exploratory process.  
+Covers:  
+- Cleaning & standardization (device names, keyword inconsistencies, date formatting, type conversions, NULL handling).  
+- Rollups (daily, weekly, device-level, keyword-level).  
+- Efficiency metrics (ROI, CPC, CPA, profit per click, etc.).
+- grouping (by device, keyword, or both).
+- Iterative refinement (views are sometimes redefined — intentionally kept to reflect exploratory analysis).  
 
-The output of this stage is a set of clean tables and views which can be exported and used in Python.  
+**Export Note:**  
+When exporting views to CSV, default SQL settings may merge fields into one column.  
+- Fix via SQL export wizard: set field separator = `,` (comma).  
+- Or handle in Python directly:  
+```pd.read_csv(..."file.csv", delimiter=";", quotechar='"', engine="python")```
+   - note that this is already implemented where needed in the full_workflow file.
 
-**Note on Exporting:**  
-When exporting views from SQL as CSV, the default export options may merge all fields into a single column. To avoid this, specify **comma (`,`) as the field separator** in the export wizard.  
+🐍 Python Code
 
-Alternatively, you can handle this directly in Python with:  
-```pd.read_csv("file.csv", delimiter=";", quotechar='"', engine="python")```
-Note that this has already been implemented where necessary in the "full_workflow.ipynb" file.
+function definitions.ipynb
+Clean notebook with only regression function definitions, fully documented with inline comments.
 
+full workflow.ipynb
+Complete workflow including:
 
+Running OLS regressions across keyword–device combinations
 
----
+Filtering significant predictors (p ≤ 0.002) to account for multiple testing
 
+Subset regression testing on devices within specific keywords
 
+Raw outputs and summaries
 
-\## 🐍 Python Code
+📊 Findings
 
-There are two Jupyter notebooks provided:
+Because the dataset was largely invariate and uniform, most results were unsurprising.
 
+Significant findings are detailed in raw_findings.md.
 
+## 📊 Power BI Dashboard  
 
-\- \[`function\_definitions.ipynb`](python/function\_definitions.ipynb)  
-      - A clean reference notebook containing only the function definitions for regression analysis, fully documented with inline comments.  
+The **Demonstrative Ads Project Dashboard** (`Demonstrative Ads Project Dashboard.pbix`) provides an interactive view of the cleaned and tested data, with multiple slicers and drill-downs that allow for flexible exploration across devices and keywords.  
 
+### Page 1 – Comparative Analysis  
+- Three slicers control the metrics shown:  
+  - **Base metrics** (sales, clicks, impressions, spend, leads, conversions)  
+  - **Efficiency metrics** (ROI, CPC, CPA, cost per lead, profit per click, etc.)  
+  - **Share metrics** (distribution of spend, clicks, conversions, etc.)  
+- All visuals are grouped by **Device** with a drill-down to **Keyword**, enabling layered analysis.  
+- Visuals include:  
+  - **Two bar charts** – show totals across groups for selected base and efficiency metrics  
+  - **One pie chart** – shows share splits for the chosen metric  
+  - **Two KPI cards** – display totals for quick reference  
 
+### Page 2 – Time Series Analysis  
+- Two **line charts** track trends over time:  
+  - One for base metrics  
+  - One for efficiency metrics  
+- Each chart has its own metric slicer.  
+- Two additional slicers (Device and Keyword) apply to both charts. Leaving one blank provides grouping by the other, giving multiple analytic perspectives.  
 
-\- \[`full\_workflow.ipynb`](python/full\_workflow.ipynb)  
-      - The complete analysis workflow, including:  
+📈 Tableau Dashboards
 
-        - Running OLS regressions across keyword–device combinations  
+Folder: ads project visualizations/
 
-        - Filtering significant predictors (`p ≤ 0.002`) on regressions with large numbers of tests (Bonferoni correction)
+Interactive workbooks (.twbx) created from the cleaned data, including:
 
-        - Subset regression testing on devices within specific keywords  
+Device and keyword performance comparisons
 
-        - Raw outputs and summaries  
+Efficiency metrics (ROI, CPC, CPA)
 
+Spend, clicks, and conversions share
 
+Trend visualizations (time series, week-over-week)
 
----
+These dashboards make the cleaned and aggregated results explorable without writing SQL or Python. They are organized into folders based on which category is being grouped by and what is being tested on.
 
+🙋 Author
 
+Nehir Rogers-Sirin
 
-\## 📊 Findings
-
-Because the dataset was largely invariate and uniform, most results were unsurprising. Significant findings may be viewed in the 'raw_findings.md' document. 
-
----
-
-
-
-\## 📈 Tableau Dashboards
-
-The Tableau workbooks (`/tableau/dashboards/`) provide interactive visualizations of the cleaned and aggregated data, including:  
-
-\- Device and keyword performance comparisons  
-
-\- Efficiency metrics (ROI, CPC, CPA)  
-
-\- Share of spend, clicks, and conversions  
-
-\- Trend visualizations (time series, week-over-week comparisons)  
-
-
-
-These dashboards make the cleaned and aggregated results explorable without writing SQL or Python.  
-
-
-
-
-
----
-
-
-
-\## 🙋 Author
-
-\*Nehir Rogers-Sirin\*  
-
-\[LinkedIn](#) | \[Portfolio](#)  
-
-
-
-
-
+Linkedin: https://www.linkedin.com/in/nehirrs/
 
 
